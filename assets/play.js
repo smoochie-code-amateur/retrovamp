@@ -61,7 +61,7 @@
     if (origEl) origEl.textContent = "Оригінальна назва: " + (game.originalName || game.title);
     if (descEl) descEl.innerHTML = esc(game.description || "Опис відсутній").replace(/\n+/g, "<br><br>");
 
-    // ---- Ruffle player ----
+    
     if (gameEl) {
       var file = resolveGameUrl(game.file);
       if (window.RufflePlayer) {
@@ -77,7 +77,7 @@
       }
     }
 
-    // ---- Description toggle ----
+    
     if (toggleBtn && descWrap) {
       toggleBtn.addEventListener("click", function () {
         var open = descWrap.classList.toggle("open");
@@ -85,7 +85,7 @@
       });
     }
 
-    // ---- Fullscreen ----
+    
     if (fsBtn && gameEl) {
       fsBtn.addEventListener("click", function () {
         var el = gameEl;
@@ -95,7 +95,7 @@
       });
     }
 
-    // ---- Similar games ----
+    
     if (similarGrid && similarSection && game.category) {
       var similar = games.filter(function (g) {
         return g.category === game.category && g.id !== game.id;
