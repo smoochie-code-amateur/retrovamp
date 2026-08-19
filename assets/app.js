@@ -39,7 +39,6 @@
     return "games/" + path;
   }
 
-  
   var marqueeEl = document.getElementById("marquee");
   if (marqueeEl) {
     loadJSON("config.json").then(function (cfg) {
@@ -67,7 +66,6 @@
     }).join('<span> | </span>');
   }
 
-  
   var CURSOR_THEMES = {
     system: {
       default: null, pointer: null, text: null, wait: null, progress: null,
@@ -128,7 +126,6 @@
     picker.addEventListener("change", function () { applyCursorTheme(picker.value); });
   }
 
-  
   loadJSON("categories.json").then(function (cats) {
     var ul = document.getElementById("cats");
     if (!ul || !cats) return;
@@ -148,7 +145,6 @@
     window.setupCustomScroll(document.querySelector(".cats-scroll"));
   });
 
-  
   var grid = document.getElementById("grid");
   if (grid) {
     var searchEl = document.getElementById("search");
@@ -253,7 +249,6 @@
     });
   }
 
-  
   window.setupCustomScroll = function (container) {
     if (!container || container.dataset.scrollReady) return;
     container.dataset.scrollReady = "1";
