@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RetroVamp — Гра</title>
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="logo" href="index.html"><img src="assets/theme/logo.svg" alt="RetroVamp" /></a>
+      <div class="ribbon"><div class="marquee"><span id="marquee">RetroVamp</span></div></div>
+      <label class="cursor-pick">Курсор:
+        <select id="cursorPicker">
+          <option value="system">Системний</option>
+          <option value="gothic-black-red">Хрест</option>
+          <option value="vampire">Вампір</option>
+        </select>
+      </label>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <img class="chrest" src="assets/theme/chrest.png" alt="" />
+        <div class="side-head">Категорії</div>
+        <ul class="cats" id="cats"></ul>
+      </aside>
+
+      <section class="game-panel">
+        <div class="game-bar">
+          <div class="game-name" id="game-title">Завантаження…</div>
+          <div class="game-buttons">
+            <button class="btn" id="toggleDesc">Сховати опис</button>
+            <button class="btn" id="fullscreen">Повний екран</button>
+          </div>
+        </div>
+
+        <div id="game"></div>
+
+        <div class="desc-wrap open" id="descWrap">
+          <div class="desc-plate">
+            <div class="orig" id="origName"></div>
+            <div id="gameDesc"></div>
+          </div>
+        </div>
+
+        <div class="similar-section" id="similarSection" style="display:none">
+          <div class="section-title">Схожі ігри</div>
+          <div class="grid" id="similarGrid"></div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <div class="vampire"><img src="assets/theme/vampire_woman_stand.png" alt="" /></div>
+
+  <footer>
+    <div class="footer-inner">
+      <img class="skull" src="assets/theme/skull_left.svg" alt="" />
+      <nav class="footer-links" id="footer-links"></nav>
+      <img class="skull" src="assets/theme/skull_right.svg" alt="" />
+    </div>
+  </footer>
+
+  <script src="vendor/ruffle/ruffle.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/play.js"></script>
+  <script data-goatcounter="https://smoochie.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RetroVamp — Політика приватності</title>
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="privacy">
+  <div class="page">
+    <header>
+      <a class="logo" href="index.html"><img src="assets/theme/logo.svg" alt="RetroVamp" /></a>
+      <div class="ribbon"><div class="marquee"><span id="marquee">RetroVamp</span></div></div>
+      <label class="cursor-pick">Курсор:
+        <select id="cursorPicker">
+          <option value="system">Системний</option>
+          <option value="gothic-black-red">Хрест</option>
+          <option value="vampire">Вампір</option>
+        </select>
+      </label>
+    </header>
+
+    <div class="privacy-layout">
+      <div class="vampire-left"><img src="assets/theme/vampire_woman_sit.png" alt="" /></div>
+      <div class="privacy-col">
+        <div class="privacy-title">Політика приватності</div>
+        <div class="scroll-wrap">
+          <div class="privacy-window" id="privacyWindow"></div>
+        </div>
+        <a class="btn back-btn" href="index.html">Назад до ігор</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="vampire"><img src="assets/theme/vampire_woman_stand.png" alt="" /></div>
+
+  <footer>
+    <div class="footer-inner">
+      <img class="skull" src="assets/theme/skull_left.svg" alt="" />
+      <nav class="footer-links" id="footer-links"></nav>
+      <img class="skull" src="assets/theme/skull_right.svg" alt="" />
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    (function () {
+      var w = document.getElementById("privacyWindow");
+      fetch("config.json")
+        .then(function (r) { return r.json(); })
+        .then(function (cfg) {
+          var blocks = (cfg && cfg.privacy) || [];
+          if (!blocks.length) {
+            w.innerHTML = "<p>Інформація відсутня.</p>";
+            window.setupCustomScroll(w);
+            return;
+          }
+          w.innerHTML = blocks.map(function (b) {
+            return '<div class="privacy-block"><h3>' + esc(b.title || "") + "</h3><p>" + esc(b.text || "") + "</p></div>";
+          }).join("");
+          window.setupCustomScroll(w);
+        })
+        .catch(function () { w.innerHTML = "<p>Не вдалося завантажити політику приватності.</p>"; window.setupCustomScroll(w); });
+
+      function esc(s) {
+        return String(s).replace(/[&<>"]/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+        });
+      }
+    })();
+  </script>
+  <script data-goatcounter="https://smoochie.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

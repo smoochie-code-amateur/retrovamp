@@ -1,0 +1,42 @@
+﻿[Wait]
+Path=Goth Busy.cur
+
+[SizeNWSE]
+Path=Goth Diagonal Resize 1.cur
+
+[SizeNESW]
+Path=Goth Diagonal Resize 2.cur
+
+[NWPen]
+Path=Goth Hand.cur
+
+[Help]
+Path=Goth Help.cur
+
+[SizeWE]
+Path=Goth Horizontal Resize.cur
+
+[Hand]
+Path=Goth Link.cur
+
+[Arrow]
+Path=Goth Main.cur
+
+[SizeAll]
+Path=Goth Move.cur
+
+[Crosshair]
+Path=Goth Precision.cur
+
+[IBeam]
+Path=Goth Text.cur
+
+[No]
+Path=Goth Unavailable.cur
+
+[SizeNS]
+Path=Goth Vertical Resize.cur
+
+[AppStarting]
+Path=Goth WIB.cur
+

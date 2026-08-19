@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Папа Луї",
+    "order": 1,
+    "icon": "cat-e2ded7c862.svg",
+    "color": "#8B0000"
+  },
+  {
+    "name": "Аркади",
+    "order": 2,
+    "icon": "cat-95a64caf97.svg",
+    "color": "#8B0000"
+  },
+  {
+    "name": "Пригоди",
+    "order": 3,
+    "icon": "cat-4e94592f66.svg",
+    "color": "#8B0000"
+  },
+  {
+    "name": "Головоломки",
+    "order": 4,
+    "icon": "cat-0ccf15ea87.svg",
+    "color": "#8B0000"
+  },
+  {
+    "name": "Стратегії",
+    "order": 5,
+    "icon": "cat-a801b15bbd.svg",
+    "color": "#8B0000"
+  },
+  {
+    "name": "Одягалки",
+    "order": 6,
+    "icon": "cat-a473f853d7.svg",
+    "color": "#590101"
+  }
+]
