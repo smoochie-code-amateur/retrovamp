@@ -21,7 +21,7 @@
 
 html, body { margin: 0; padding: 0; }
 
-/* Custom cursor scheme (driven by --cur-* vars set in app.js) */
+
 body { cursor: var(--cur-default); }
 a, button, .btn, .cat-item, .card, [role="button"], label[for] { cursor: var(--cur-pointer); }
 input, textarea, select, [contenteditable="true"] { cursor: var(--cur-text); }
@@ -52,7 +52,7 @@ a { color: var(--ink); text-decoration: none; }
   padding: 4px clamp(48px, 18vw, 320px) 0 clamp(14px, 4vw, 48px);
 }
 
-/* ---------- Header ---------- */
+
 header {
   position: sticky;
   top: 0;
@@ -131,7 +131,6 @@ header {
 }
 .cursor-pick select:focus { outline: 1px solid var(--red-bright); }
 
-/* ---------- Footer ---------- */
 footer {
   position: fixed;
   left: 0;
@@ -155,7 +154,7 @@ footer {
 .footer-links { display: flex; align-items: center; gap: 10px; }
 .footer-links a:hover { color: var(--red-bright); text-decoration: underline; }
 
-/* ---------- Layout ---------- */
+
 .layout {
   display: flex;
   align-items: flex-start;
@@ -212,7 +211,7 @@ footer {
   padding-right: 16px;
 }
 
-/* ---------- Custom scrollbar (track + thumb elements) ---------- */
+
 .cats-scroll, .privacy-window {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -262,7 +261,7 @@ footer {
 .cat .cat-icon { width: 26px; height: 26px; flex: 0 0 26px; text-align: center; font-size: 22px; line-height: 26px; }
 .cat .cat-icon img { width: 100%; height: 100%; }
 
-/* ---------- Content / catalog ---------- */
+
 .content {
   position: relative;
   flex: 1 1 auto;
@@ -341,7 +340,6 @@ footer {
 .card-title { font-size: 18px; font-weight: 700; line-height: 1.15; }
 .card-meta { font-size: 14px; opacity: .8; }
 
-/* ---------- Buttons ---------- */
 .btn {
   align-self: flex-start;
   border: none;
@@ -356,7 +354,7 @@ footer {
 }
 .btn:hover { filter: brightness(1.12); }
 
-/* ---------- Pager ---------- */
+
 .pager {
   display: flex;
   justify-content: center;
@@ -415,7 +413,7 @@ footer {
   padding: 0 2px;
 }
 
-/* ---------- Play page ---------- */
+
 .game-panel { flex: 1 1 auto; min-width: 0; max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
 .game-bar { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
 .game-name {
@@ -465,7 +463,7 @@ footer {
 .section-title { font-size: clamp(20px, 3vw, 24px); font-weight: 700; margin: 6px 0; text-shadow: 0 1px 3px #000; }
 .similar-section { background: url(theme/bg_window.png) no-repeat center / 100% 100%; border-radius: 14px; padding: 14px 16px; }
 
-/* ---------- Privacy ---------- */
+
 .privacy-layout {
   display: flex;
   align-items: center;
@@ -529,7 +527,7 @@ body.privacy .cursor-pick {
 
 .back-btn { position: absolute; right: 14px; bottom: -8px; }
 
-/* ---------- Right-edge vampire ---------- */
+
 .vampire {
   position: fixed;
   right: 0;
@@ -543,7 +541,7 @@ body.privacy .cursor-pick {
 }
 .vampire img { height: 100vh; width: auto; display: block; object-fit: contain; }
 
-/* ---------- Responsive ---------- */
+
 @media (max-width: 1024px) {
   .layout { flex-direction: column; }
   .sidebar {
